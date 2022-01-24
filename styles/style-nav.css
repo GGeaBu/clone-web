@@ -1,0 +1,124 @@
+/* 자주 변경되는 값들은(예: 색상 등) 변수 지정해서 한번에 바꿀 수 있음 */
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+
+  /* 사용시에는 사용하려는 속성값에다가 var() 함수를 사용 */
+}
+
+/* 최상위 부터 시작해서 세부적으로 스타일링 */
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  /* color: white; */
+
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #263343; */
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  font-size: 24px; /*이렇게 하면 i태그와 글자도 한꺼번에 크기 조절*/
+  /* color: white; */
+  color: var(--text-color);
+}
+
+.navbar__logo i {
+  /* color: #d49466; */
+  color: var(--accent-color);
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  /* background-color: #d49466; */
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.navbar__icons {
+  list-style: none;
+  /* color: white; */
+  color: var(--text-color);
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+/* 햄버거 메뉴는 문서의 흐름에서 벗어나
+위치를 마음대로 지정하고 싶기에
+position: absolute 속성을 사용한다. */
+.navbar__toggleBtn {
+  /* 기본적으로 얘는 화면이 작아졌을떄만 보여져야하기에
+  화면이 크면 안보이게 하기위해 아래 속성 사용 */
+  display: none;
+
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  /* color: #d49466; */
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    /* 처음에는 안보였다가 메뉴버튼 클릭시 보이게 하기위해 (js 사용)*/
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons {
+    /* 처음에는 안보였다가 메뉴버튼 클릭시 보이게 하기위해 */
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__toggleBtn {
+    /* 화면이 작아졌을때만 보이도록 */
+    display: block;
+  }
+
+  /* 메뉴 아이콘 클릭시 숨겨졌던 메뉴와 아이콘들을 보여지게함 */
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}

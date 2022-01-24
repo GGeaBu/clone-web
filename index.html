@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style-nav.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <script src="script/nav.js" defer></script>
+
+    <title>nav bar</title>
+</head>
+<body>
+    <!-- 의미 없는 div 태그보단 의미 있는 태그로 사용 -->
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fab fa-accusoft"></i>
+            <!-- 메인으로 돌아가기위해 앵커 태그 사용 -->
+            <a href="">GGeabuCoding</a>
+        </div>
+
+        <!-- div태그보단 ul 태그 사용 -->
+        <ul class="navbar__menu">
+            <!-- 여러 태그 만들시 편의 기능 사용 (li>a)*5 -->
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+
+        <!-- 아이콘 또한 목록이 있는 리스트이기에 ul 태그 사용 -->
+        <ul class="navbar__icons">
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-facebook-f"></i></li>
+        </ul>
+
+        <!-- 얘는 수동적으로 우리가 배열 -->
+        <a href="#" class="navbar__toggleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <script src="https://kit.fontawesome.com/37061f2314.js" crossorigin="anonymous"></script>
+</body>
+</html>
