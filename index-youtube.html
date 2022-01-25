@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style-youtube.css">
+
+    <script src="script/youtube.js"></script>
+
+    <title>YouTube Mobile</title>
+</head>
+<body>
+    <!-- 내가 한 것 마냥 굳이 큰 container div로 안 감싸도 됨 -->
+    <!-- Header -->
+    <!-- nav보단 header가 맞는 표현이었음 -->
+    <header>
+        <div class="logo">
+            <i class="fab fa-youtube"></i>
+            <!-- p태그가 아니라 span태그를 활용한다! -->
+            <span class="title">Youtube</span>
+        </div>
+        <!-- 굳이 navbar했을 때 처럼 position 말고 바로 넣어서 flex정렬 -->
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </header>
+
+    <!-- Video Player-->
+    <section class="player">
+        <video controls src="videos/Forest - 97998.mp4"></video>
+    </section>
+
+    <div class="infoAndUpNext">
+        <!-- Video Info -->
+        <section class="info">
+            <!-- Metadata -->
+            <div class="metadata">
+                <ul class="hashtags">
+                    <li>#GGeabuCoding</li>
+                    <li>#GGeabuCoder</li>
+                    <li>#GGeabu</li>
+                </ul>
+                <div class="titleAndButton">
+                    <!-- p 태그 보다는 span태그를 활용해라 (본문 내용이 아니기에) -->
+                    <span class="title clamp">
+                        Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트
+                        따라 만들기 | 프론트엔드 개발자 입문편: HTML, CSS JavaScript 깨부코딩과
+                        함께하는 프론트엔드 실전 입문편
+                    </span>
+                    <!-- 클릭을 위해 a태그로 감싸는게 아니라 button 태그를 활용 -->
+                    <button class="moreBtn">
+                        <i class="fas fa-sort-down"></i>
+                    </button>
+                </div>
+                <span class="views">1M views 1 month ago</span>
+            </div>
+            <!-- Actions -->
+            <ul class="actions">
+                <!-- 좋아요 버튼도 클릭 이벤트를위해 a 태그 감싸기가 아닌 button 태그 활용 -->
+                <li><button><i class="active fas fa-thumbs-up"></i><span>1K</span></button></li>
+                <li><button><i class="fas fa-thumbs-down"></i><span>0</span></button></li>
+                <li><button><i class="fas fa-share"></i><span>Share</span></button></li>
+                <li><button><i class="fas fa-plus"></i><span>Save</span></button></li>
+                <li><button><i class="fas fa-flag"></i><span>Report</span></button></li>
+            </ul>
+            <!-- Channel Description -->
+            <div class="channel">
+                <div class="metadata">
+                    <img src="images/GGeaBu.jpg" alt="">
+                    <div class="info">
+                        <span class="names">깨부코딩 by 깨부</span>
+                        <span class="subscribers">1M subscribers</span>
+                    </div>
+                </div>
+                <button class="subscribe">subscribe</button>
+            </div>
+        </section>
+
+        <!-- UpNext -->
+        <section class="UpNext">
+            <span class="title">Up Next</span>
+            <ul>
+                <!-- 나중에는 이런 변화하는 데이터는 자바스크립트를 통해서
+                동적으로 받아오기에 이렇게 일일이 작성할 필요가 없다. -->
+                <li class="item">
+                    <div class="img"><img src="images/pier-g90c7d616b_1920.jpg" alt=""></div>
+                    <div class="info">
+                        <span class="title">프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발
+                            입문자편 강의를 시작합니다. ★ (HTML, CSS, Javascript + 실전
+                            프로젝트)
+                        </span>
+                        <span class="name">깨부코딩 by 깨부</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img"><img src="images/school-g205db19ce_1920.jpg" alt=""></div>
+                    <div class="info">
+                        <span class="title">HTML 기초, React 할때 꼭 필요한 팁! 쉽다고 무시하면 안되요 |
+                            프론트엔드 개발자 입문편: HTML, CSS Javascript
+                        </span>
+                        <span class="name">깨부코딩 by 깨부</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img"><img src="images/thumbnail-g2d9b0113e_1920.jpg" alt=""></div>
+                    <div class="info">
+                        <span class="title">HTML 태그 완성, 웹 포트폴리오 만들기 전에 꼭 보세요 | 프론트드
+                            개발자 입문편: HTML, CSS, Javascript
+                        </span>
+                        <span class="name">깨부코딩 by 깨부</span>
+                        <span class="views">82K views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://kit.fontawesome.com/37061f2314.js" crossorigin="anonymous"></script>
+</body>
+</html>
