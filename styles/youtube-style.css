@@ -1,11 +1,12 @@
 :root {
   --text-color: #212121;
-  --icons-color: #cfcfcf;
+  --icons-color: #726c6c;
   --background-color: #f0f4f5;
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -14,6 +15,8 @@ a {
 }
 
 .container {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -37,9 +40,15 @@ a {
   flex-wrap: wrap;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .info__videoTags {
   margin: 0;
-  padding: 5px 5px;
+  padding: 0 12px;
   color: blue;
 }
 
@@ -47,13 +56,100 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-}
-
-.info__title p {
+  font-size: 18px;
   padding: 0 12px;
 }
 
+.info__title p {
+  margin: 0;
+  padding-top: 8px;
+  color: var(--text-color);
+}
+
 .info__title i {
-  margin-right: 12px;
+  margin: 0 8px;
+}
+
+.info__videoView {
+  margin: 5px 12px;
+  font-size: smaller;
+  color: var(--text-color);
+}
+
+.info__icons {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+}
+
+.info__icons li a {
+  color: var(--icons-color);
+}
+
+.info__channel {
+  border-top: 1px solid var(--icons-color);
+  border-bottom: 1px solid var(--icons-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0 12px;
+  color: var(--text-color);
+  margin: 8px 12px;
+}
+
+.info__channel_img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+}
+
+.info__channel p {
+  display: inline-block;
+}
+
+.recommand {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
+  list-style: none;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.recommand li {
+  margin-bottom: 20px;
+}
+
+.recommand li a video {
+  float: left;
+  width: 200px;
+  margin: 0 8px;
+}
+
+.search_menu {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 12px;
+  color: white;
+  padding: 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_menu li {
+  padding: 0 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
