@@ -18,17 +18,19 @@
             <a class="juniorNaver" href="">쥬니어네이버</a>
             <a class="happybean" href="">해피빈</a>
         </div>
-        <div class="logo">
-            <a href=""><i class="fab fa-redhat"></i></a>
-            <a href="" class="logoNaver">naver</a>
-        </div>
-        <div class="search">
-            <input type="text">
-            <button class="searchBtn"><i class="fas fa-search"></i></button>
+        <div class="logoAndSearch">
+            <div class="logo">
+                <a href=""><i class="fab fa-redhat"></i></a>
+                <a href="" class="logoNaver">naver</a>
+            </div>
+            <div class="search">
+                <input type="text" id="userSearch" size="60">
+                <button class="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
         </div>
         <div class="navbar">
             <nav>
-                <ul>
+                <ul class="navUlFirst">
                     <li><a href="">메일</a></li>
                     <li><a href="">카페</a></li>
                     <li><a href="">블로그</a></li>
@@ -37,6 +39,8 @@
                     <li><a href="">라이브</a></li>
                     <li><a href="">Pay</a></li>
                     <li><a href="">TV</a></li>
+                </ul>
+                <ul class="navUlSecond">
                     <li><a href="">사전</a></li>
                     <li><a href="">뉴스</a></li>
                     <li><a href="">증권</a></li>
@@ -58,6 +62,7 @@
                     <span class="weatherC">6.4</span>
                     <span class="weatherCKR">맑음</span>
                     <span class="weatherMin">-4.0º</span>
+                    <span class="slash">/</span>
                     <span class="weatherMax">6.0º</span>
                 </a>
             </div>

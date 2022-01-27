@@ -11,6 +11,7 @@
   /* size */
   --padding: 12px;
   --avata-size: 36px;
+  --logo-size: 48px;
 
   /* font size */
   --font-large: 18px;
@@ -41,16 +42,19 @@ ul {
   list-style: none;
 }
 
+/* Header */
 header {
   height: 216px;
-  background-color: var(--grey-light-color);
+  /* background-color: var(--grey-light-color); */
   margin: auto; /*중앙 정렬 방법*/
   width: 1080px; /*고정된 폭을 지정해줘야 됨*/
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Header -> junior */
 header .junior {
   align-self: flex-end;
   padding: 8px 12px;
@@ -69,6 +73,7 @@ header .junior .pageStartBtn {
 header .junior .pageStartBtn i {
   box-shadow: 2px 4px 8px gray;
   border-radius: 50%;
+  color: var(--grey-light-color);
 }
 
 header .junior .juniorNaver {
@@ -79,4 +84,99 @@ header .junior .juniorNaver {
 
 header .junior .happybean {
   font-weight: bold;
+}
+
+/* Header logo And Search */
+header .logoAndSearch {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-self: flex-start;
+  padding: var(--padding);
+}
+
+header .logoAndSearch .logo {
+  font-size: var(--logo-size);
+}
+
+header .logoAndSearch .logo .logoNaver {
+  color: var(--green-color);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header .logoAndSearch .logo a i {
+  color: yellow;
+}
+
+header .logoAndSearch .search {
+  padding: var(--padding);
+}
+
+header .logoAndSearch .search input {
+  height: 40px;
+  border: 3px solid var(--green-color);
+}
+
+header .logoAndSearch .search button {
+  color: white;
+  height: 48px;
+  border: 3px solid var(--green-color);
+  background-color: var(--green-color);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid var(--grey-dark-color);
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding);
+}
+
+.navbar nav .navUlSecond {
+  padding-left: 0;
+}
+
+.navbar nav .navUlSecond li a {
+  color: var(--black-color);
+}
+
+.navbar nav ul li {
+  padding: 0 5px;
+}
+
+.navbar nav ul li a {
+  color: var(--green-color);
+  font-weight: bold;
+}
+
+.navbar .weather a i {
+  color: orange;
+}
+
+.navbar .weather a .weatherC,
+.navbar .weather a .weatherCKR {
+  color: var(--black-color);
+  font-weight: bold;
+}
+
+.navbar .weather a .weatherMin {
+  color: var(--blue-color);
+}
+
+.navbar .weather a .weatherMax {
+  color: var(--red-color);
 }
