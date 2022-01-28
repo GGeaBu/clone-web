@@ -1,0 +1,201 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --green-color: #1be643;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* size */
+  --padding: 12px;
+  --padding-large: 18px;
+  --avata-size: 36px;
+  --logo-size: 48px;
+
+  /* font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+footer {
+  background-color: rgb(223, 219, 219)
+  height: 420px;
+  margin: auto;
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--grey-dark-color);
+}
+
+/* Cultures */
+.culture_container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.culture_container .culture a {
+  display: flex;
+}
+
+.culture_container .culture .img {
+  flex: 1 1 40%;
+  margin-right: var(--padding);
+}
+
+.culture_container .culture img {
+  width: 100%;
+  height: 100%;
+}
+
+.culture_container .culture .culture_info span {
+  display: block;
+  padding-bottom: var(--padding);
+}
+
+.culture_container .culture .culture_info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  padding-right: var(--padding);
+}
+
+.culture_container .culture .culture_info .culture_info_title {
+  font-size: var(--font-medium);
+  color: var(--green-color);
+  font-weight: bold;
+}
+
+.culture_container .culture .culture_info .culture_info_name {
+  font-size: var(--font-medium);
+  color: var(--black-color);
+  font-weight: bold;
+}
+
+.culture_container .culture .culture_info .culture_info_extra {
+  color: black;
+  font-size: var(--font-small);
+}
+
+/* Notice And Service */
+.noticeAndService {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: var(--padding) 0;
+  border-top: 1px solid var(--grey-dark-color);
+  border-bottom: 1px solid var(--grey-dark-color);
+}
+
+.noticeAndService .notice {
+  color: var(--black-color);
+}
+
+.noticeAndService .service {
+  color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.noticeAndService .service i {
+  margin-left: 8px;
+  color: var(--grey-dark-color);
+  font-weight: bold;
+}
+
+/* APIs */
+.API {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: var(--padding);
+  padding-bottom: var(--padding);
+  border-bottom: 1px solid var(--grey-dark-color);
+}
+
+.API .API_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.API .API_info .API_items {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+}
+
+.API .API_info .API_items span {
+  font-weight: bold;
+}
+
+.API .API_info .API_items .API_items_info {
+  display: flex;
+  padding-left: 0;
+  margin: 4px;
+}
+
+.API .API_info .API_items .API_items_info li {
+  padding: 0 var(--padding);
+  border-left: 1px solid var(--grey-dark-color);
+}
+
+.API .API_info .API_items .API_items_info li:first-child {
+  padding-left: 0;
+  border: none;
+}
+
+.API .whaleAndFlower {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.API .whaleAndFlower .icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.API .whaleAndFlower .icons .textBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.API .whaleAndFlower .icons .textBox span {
+  color: var(--black-color);
+  font-weight: bold;
+}
+
+.API .whaleAndFlower .icons img {
+  width: 40%;
+  margin: 0 var(--padding);
+}
+
+/* Hire */
+.hire ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  font-size: var(--font-small);
+}
+
+.hire ul li {
+  padding: 0 var(--padding);
+  border-left: 1px solid var(--grey-dark-color);
+}
+
+.hire ul li:first-child {
+  padding-left: 0;
+  border: none;
+}
+
+.hire ul li a[class="customer_info"] {
+  color: rgb(82, 80, 80);
+  font-weight: bold;
+}
