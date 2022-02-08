@@ -131,6 +131,7 @@ header .logoAndSearch .search button {
   align-items: center;
   width: 100%;
   border-top: 1px solid var(--grey-dark-color);
+  border-bottom: 1px solid var(--grey-dark-color);
 }
 
 .navbar nav {
